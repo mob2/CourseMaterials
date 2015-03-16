@@ -5,7 +5,7 @@ Public Course Materials
 
 ## Recommended Reading
 
-[The Swift Programming Language](https://itunes.apple.com/us/book/swift-programming-language/id881256329?mt=11]
+[The Swift Programming Language](https://itunes.apple.com/us/book/swift-programming-language/id881256329?mt=11)
 
 [iOS Human Interface Guidelines](https://itunes.apple.com/us/book/ios-human-interface-guidelines/id877942287?mt=11)
 
