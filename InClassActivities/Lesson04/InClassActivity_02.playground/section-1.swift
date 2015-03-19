@@ -16,17 +16,15 @@
 
 // TODO: Write a function that calls the above function in order to print the sum of the first 20 fibonacci numbers.
 
-// TODO: Write a function that takes in a number and prints out whether it is prime, composite or neither.
+// TODO: Write a function that takes in a number and prints out whether it is prime, composite or neither. (e.g. 0 is not prime or composite, 1 is prime, etc)
+// Hint:  What is the remainder if 6 is divided by 2?  What is the remainder if 6 is divided by 3?  What about if 7 divided by 2 or 3?
 
-// TODO: Write a function that prints out each of the first 20 fibonacci numbers and whether they are prime. (e.g. 0 is not prime or composite, 1 is prime, etc)
+// TODO: Write a function that prints out each of the first 20 fibonacci numbers and whether they are prime.
+// Hint: Be lazy.
 
 // TODO: Write a function that takes in two numbers, a bill amount and an optional tip percentage (represented as a float, e.g. .2 = 20% tip). Return a tuple with the total bill amount and the tip amount (if included).
 
-// TODO: Write a function that takes in a string and returns a string that is the reverse of the input. Append two strings using the + operator.
-
 // BONUS TODO: Write a function that takes in an array of strings and a search term string. Return a boolean indicating whether the search term string exists in the array.
-
-// BONUS TODO: Write a function that accepts a string and returns a boolean indicating whether a string is a palindrome (reads the same backwards or forwards).
 
 // BONUS TODO: Write a function that takes in two strings and returns a boolean indicating whether the two strings are equal
 
