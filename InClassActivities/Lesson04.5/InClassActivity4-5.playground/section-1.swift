@@ -10,35 +10,37 @@ import UIKit
 		Addition
 		Subtraction
 		Multiplication
+	Optional (Very hard):
 		Division
  Once these functions are complete some simple algorthims will need to be implemented.
- Additionally, the operators ``*", ``/", and ``%" are banned because of... reasons.
+ Additionally, the operators ``*" and ``%" are banned because of... reasons.
 However you may use the function ``sqrt(Double)" to calculate any roots needed.
 */
 
 // TODO: Complete the addition function.
-func addition(lhs:Double, rhs:Double) -> Double?
+func addition(lhs:Double, rhs:Double) -> Double
 
 // TODO: Complete the subtraction function.
-func subtraction(lhs:Double, rhs:Double) -> Double?
+func subtraction(lhs:Double, rhs:Double) -> Double
 
 // TODO: Complete the multiplication function.
-func multiplication(lhs:Double, rhs:Double) -> Double?
+func multiplication(lhs:Double, rhs:Double) -> Double
 
+// Bonus!
 // TODO: Complete the division function.
 // Note: Remember that the rhs cannot be 0.
 // result = lhs / rhs
-func division(lhs:Double, rhs:Double) -> Double?
+func division(lhs:Double, rhs:Double) -> Double
 
 // TODO: Complete the power function.
 // result = lhs ^ rhs
-// Assume rhs is always a whole number.
+// Assume rhs is always a whole number.  Or check if is not and then print a warning and return nil.
 func power(lhs:Double, rhs:Double) -> Double?
 
 // TODO: Complete the quadratic equation.
 // result = (-b +/ sqrt(b ^ 2 - 4ac)) / (2a)
 // Note:  The quadratic equation results in 2 possible values.
-func quadratic(a:Double, b:Double, c:Double) -> (plus:Double, minus:Double)
+func quadratic(a:Double, b:Double, c:Double) -> (plus:Double, minus:Double)?
 
 // TODO: Calcualte the third side of the right triangle.
 // c ^ 2 = a ^ 2 + b ^ 2
