@@ -8,22 +8,28 @@
 
 import UIKit
 
+// TODO: Add your Player Class to the project.
+// Add to your Player: Team (red, blue, or green), Nickname, Score, and Quote
+// Extend your Player class to conform to PlayerRanking
+
+protocol PlayerRanking {
+	func getRank() -> NSString
+}
+
 class MasterViewController: UITableViewController {
 
-	var objects = [AnyObject]()
-
-
+	// TODO: Configure the existing cell to display Blue Players
+	// TODO: Add two extra cells, one for Red and Green Players, do not assign segues to them.
+	
 	override func awakeFromNib() {
 		super.awakeFromNib()
 	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+	// TODO: Load at least 6 players into your model, two for each color
 		// Do any additional setup after loading the view, typically from a nib.
-		self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
-		let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-		self.navigationItem.rightBarButtonItem = addButton
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -31,53 +37,49 @@ class MasterViewController: UITableViewController {
 		// Dispose of any resources that can be recreated.
 	}
 
-	func insertNewObject(sender: AnyObject) {
-		objects.insert(NSDate(), atIndex: 0)
-		let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-		self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-	}
 
 	// MARK: - Segues
 
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		if segue.identifier == "showDetail" {
-		    if let indexPath = self.tableView.indexPathForSelectedRow() {
-		        let object = objects[indexPath.row] as NSDate
-		    (segue.destinationViewController as DetailViewController).detailItem = object
-		    }
-		}
+	// TODO: Use tableView.indexPathForSelectedRow() to get the currently selected index path
+	//	 Then load the detail view with the player data
+
+	// TODO: Change the background color for your detail view to match your player.
+		
 	}
 
-	// MARK: - Table View
+	// MARK: - UITableViewDataSource
 
 	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-		return 1
+		// #warning Default implementation returns 0
+		return 0
 	}
 
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return objects.count
+		// #warning Default implementation returns 0
+		return 0
 	}
 
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
-		let object = objects[indexPath.row] as NSDate
-		cell.textLabel!.text = object.description
+		// TODO: Dequeue the correct cell, by itentifier, for the current player
+		// Cells should show player's nickname, ranking (good, bad, etc), and
+		//   the icon for their team (see, Images.xcassets)
+		//   Set the icon either programatically or in Storyboards
+		
+		// #warning Cells not returning.
 		return cell
 	}
+	
+	// MARK - UITableViewDelegate
+	
+	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
-	override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-		// Return false if you do not want the specified item to be editable.
-		return true
-	}
-
-	override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-		if editingStyle == .Delete {
-		    objects.removeAtIndex(indexPath.row)
-		    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-		} else if editingStyle == .Insert {
-		    // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-		}
+		// HINT:  Loading viewControllers from storyboards programatically
+		// let detail = self.storyboard?.instantiateViewControllerWithIdentifier("detailViewController") as DetailViewController
+		
+		// TODO: Load the selected user into detail
+		// TODO: Present detail modally
 	}
 
 

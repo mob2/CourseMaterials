@@ -9,24 +9,23 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+	
+	// TODO: Modify this class to support modal dismissal
+	// Hint: View Controllers should not dismiss themselves
 
-	@IBOutlet weak var detailDescriptionLabel: UILabel!
-
-
+	/// You can load your player in here!
 	var detailItem: AnyObject? {
+		// didSet gets called after the object is set
 		didSet {
 		    // Update the view.
 		    self.configureView()
 		}
 	}
 
+	// Load what the view should look like
 	func configureView() {
 		// Update the user interface for the detail item.
-		if let detail: AnyObject = self.detailItem {
-		    if let label = self.detailDescriptionLabel {
-		        label.text = detail.description
-		    }
-		}
+		// Show the Player's name, the icon for the player, score, and quote
 	}
 
 	override func viewDidLoad() {
@@ -42,4 +41,6 @@ class DetailViewController: UIViewController {
 
 
 }
+
+// TODO: BONUS - Add a gesture to dismiss on swipe down only if this is presented modally.
 
